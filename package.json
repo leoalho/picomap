@@ -1,6 +1,6 @@
 {
     "name": "picomap",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A small and simple map client",
     "main": "dist/picomap.js",
     "scripts": {
@@ -8,9 +8,11 @@
     },
     "keywords": [],
     "author": "Leo Alho",
+    "type": "module",
     "license": "ISC",
     "devDependencies": {
         "bundlesize": "^0.18.1",
+        "rollup": "^3.29.1",
         "webpack": "^5.88.2",
         "webpack-cli": "^5.1.4"
     }

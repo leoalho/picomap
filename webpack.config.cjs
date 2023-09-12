@@ -6,9 +6,12 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     filename: "picomap.js",
     library: {
-        type: 'umd',
-        name: 'picomap',
+        type: 'this',
+        name: 'Picomap',
       },
+  },
+  optimization: {
+    minimize: false
   },
   mode: "production",
 };
