@@ -5,7 +5,10 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "picomap.js",
-    library: "picomap",
+    library: {
+        type: 'umd',
+        name: 'picomap',
+      },
   },
   mode: "production",
 };

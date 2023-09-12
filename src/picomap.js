@@ -31,7 +31,7 @@ export default class Picomap {
     controlLayer.append(this.#createButton("\u25C0", -0.2, 0,0)); //Left
     controlLayer.append(this.#createButton("\u25B6", 0.2, 0,0)); //Right
     controlLayer.append(document.createElement("br"));
-    controlLayer.append(this.#createButton("\u25BC", -0.2, 0,0)); //Down
+    controlLayer.append(this.#createButton("\u25BC", 0, -0.2,0)); //Down
     controlLayer.append(document.createElement("br"));
 
     controlLayer.append(this.#createButton("+", 0, 0,1));
