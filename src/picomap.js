@@ -22,12 +22,12 @@ export default class Picomap {
   #createControlLayer() {
     let controlLayer = document.createElement("div");
     controlLayer.style = "height: 100%; width: 100%; position: absolute; top: 0px; left: 0px";
-    controlLayer.append(this.#createButton("\u25B2", 0, 0.2, 0, 40, 20)); //Up
+    controlLayer.append(this.#createButton("\u25B2", 0, 1, 0, 40, 20)); //Up
     controlLayer.append(document.createElement("br"));
-    controlLayer.append(this.#createButton("\u25C0", -0.2, 0, 0, 20, 40)); //Left
-    controlLayer.append(this.#createButton("\u25B6", 0.2, 0, 0, 60, 40)); //Right
+    controlLayer.append(this.#createButton("\u25C0", -1, 0, 0, 20, 40)); //Left
+    controlLayer.append(this.#createButton("\u25B6", 1, 0, 0, 60, 40)); //Right
     controlLayer.append(document.createElement("br"));
-    controlLayer.append(this.#createButton("\u25BC", 0, -0.2, 0, 40, 60)); //Down
+    controlLayer.append(this.#createButton("\u25BC", 0, -1, 0, 40, 60)); //Down
     controlLayer.append(document.createElement("br"));
     controlLayer.append(this.#createButton("+", 0, 0, 1, 40, 100));
     controlLayer.append(document.createElement("br"));
@@ -69,8 +69,8 @@ export default class Picomap {
   }
 
   #move(x,y,z){
-    this.lon += x;
-    this.lat += y;
+    this.lon += x*360/(Math.pow(2,this.zoom));
+    this.lat += y*170.12/(Math.pow(2,this.zoom));
     this.zoom += z;
     this.#renderTiles();
   }

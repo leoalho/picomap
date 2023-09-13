@@ -6,9 +6,10 @@ export default {
 		format: 'es'
 	},
     {
-        file: 'dist/picomap.js',
+        file: 'dist/picomap.max.js',
 		format: 'umd',
-        name: 'Picomap'
+        name: 'Picomap',
+        sourcemap: 'true'
     }
     ]
 };

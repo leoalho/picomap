@@ -5,6 +5,9 @@
       },
       {
         "path": "./dist/picomap-es.js"
+      },
+      {
+        "path": "./dist/picomap.max.js"
       }
     ]
   }
