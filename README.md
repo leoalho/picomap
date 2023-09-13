@@ -40,7 +40,7 @@ Picomap accepts the following attributes, none of which are required:
 1. Clone the git library: `https://github.com/leoalho/picomap.git`
 2. Install dependecies: `npm install`
 3. Build the files: `npm run build`\
-This will build three different files to to ./dist directory.
+This will build three different files to to ./dist directory. picomap.max.js for the bundles cjs file, picomap-es.js for the bundled es file and picomap.js for the minimized cjs file. In addition source maps are created for each file.
 
 ## Using with npm
 The library is possible to install with npm by running `npm install picomap`. The files for the library are as specified in the las section. Both ES import and CommonJS require syntax should work.
