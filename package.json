@@ -1,19 +1,21 @@
 {
     "name": "picomap",
-    "version": "1.0.1",
+    "version": "1.0.3",
     "description": "A small and simple map client",
-    "main": "dist/picomap.js",
-    "scripts": {
-        "build": "webpack && bundlesize"
+    "main": "./dist/picomap.js",
+    "exports": {
+        "import": "./dist/picomap-es.js",
+        "require": "./dist/picomap.js"
     },
-    "keywords": [],
+    "scripts": {
+        "build": "rollup -c && bundlesize"
+    },
+    "keywords": ["map"],
     "author": "Leo Alho",
-    "type": "module",
     "license": "ISC",
     "devDependencies": {
         "bundlesize": "^0.18.1",
         "rollup": "^3.29.1",
-        "webpack": "^5.88.2",
-        "webpack-cli": "^5.1.4"
+        "uglify-js": "^3.17.4"
     }
 }

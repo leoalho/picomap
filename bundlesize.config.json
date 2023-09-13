@@ -2,6 +2,9 @@
     "files": [
       {
         "path": "./dist/picomap.js"
+      },
+      {
+        "path": "./dist/picomap-es.js"
       }
     ]
   }

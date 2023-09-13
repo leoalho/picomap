@@ -12,10 +12,6 @@ export function lat2tile(lat, zoom) {
 
 export function tileOffset(z, lon, lat) {
   let pixels = 256 * Math.pow(2, z);
-  let cordy =
-    (C / 2 - R * Math.log(Math.tan((lat * Math.PI / 180) / 2 + Math.PI / 4))) / C;
-  return {
-    x: parseInt(((180 + lon) / 360) * pixels) % 256,
-    y: parseInt(cordy * pixels) % 256,
-  };
+  let cordy = (C / 2 - R * Math.log(Math.tan((lat * Math.PI / 180) / 2 + Math.PI / 4))) / C;
+  return {x: parseInt(((180 + lon) / 360) * pixels) % 256, y: parseInt(cordy * pixels) % 256};
 }
