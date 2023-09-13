@@ -9,7 +9,7 @@
     },
     "scripts": {
         "build": "rollup -c && npm run uglify && bundlesize",
-        "uglify": "uglifyjs ./dist/picomap.max.js -o ./dist/picomap.js -b beautify=false,ascii_only=true"
+        "uglify": "uglifyjs ./dist/picomap.max.js -o ./dist/picomap.js -b beautify=false,ascii_only=true --source-map filename=dist/picomap.js.map"
     },
     "keywords": ["map"],
     "author": "Leo Alho",

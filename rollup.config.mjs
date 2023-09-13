@@ -3,7 +3,8 @@ export default {
 	input: 'src/picomap.js',
 	output: [{
 		file: 'dist/picomap-es.js',
-		format: 'es'
+		format: 'es',
+        sourcemap: 'true'
 	},
     {
         file: 'dist/picomap.max.js',
