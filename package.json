@@ -1,6 +1,6 @@
 {
     "name": "picomap",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "A small and simple map client",
     "main": "./dist/picomap.js",
     "exports": {
@@ -9,7 +9,7 @@
     },
     "scripts": {
         "build": "rollup -c && npm run uglify && bundlesize",
-        "uglify": "uglifyjs ./dist/picomap.max.js -o ./dist/picomap.js -b beautify=false,ascii_only=true --source-map filename=dist/picomap.js.map"
+        "uglify": "uglifyjs ./dist/picomap.max.js -c -m -o ./dist/picomap.js -b beautify=false,ascii_only=true --source-map filename=dist/picomap.js.map"
     },
     "keywords": ["map"],
     "author": "Leo Alho",
