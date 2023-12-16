@@ -50,12 +50,13 @@ export default class Picomap {
     let offset = tileOffset(this.zoom, this.lon, this.lat);
     this.mapLayer.style.transform = `translate3d(${128 - offset.x}px,${128 - offset.y}px,0px)`;
     const tiles = [];
-    for (let i = 0; i < 2*nTiles(this.height) + 1; i++) {
-      for (let j = 0; j < 2* nTiles(this.width) + 1; j++) {
-        let transY = -((this.height / 2 - 128) % 256) + i * 256;
-        let transX = -((this.width / 2 - 128) % 256) + j * 256;
-        tiles.push(this.#createTile(this.zoom, centerX + j - nTiles(this.width), centerY + i - nTiles(this.height), transX, transY));
-      }
+    for (let i = -nTiles(this.height); i <= nTiles(this.height); i++) {
+        for (let j = -nTiles(this.width); j <= nTiles(this.width); j++) {
+          console.log(i,j)
+          let transY = (this.height / 2 - 128) + i * 256;
+          let transX = (this.width / 2 - 128) + j * 256;
+          tiles.push(this.#createTile(this.zoom, centerX + j, centerY + i, transX, transY));
+        }
     }
     this.mapLayer.replaceChildren(...tiles);
   }

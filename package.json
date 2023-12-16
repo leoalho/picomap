@@ -1,6 +1,6 @@
 {
     "name": "picomap",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "A small and simple map client",
     "main": "./dist/picomap.js",
     "exports": {
