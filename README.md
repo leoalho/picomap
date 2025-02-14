@@ -2,6 +2,7 @@
 Picomap is a hyperminimalist map client without any dependencies written in native JS.
 The source code for the project is in the ./src directory.
 
+
 ## How to use the map
 Add a div in your project with id="map". In addition add the following script to your project: `<script src="https://unpkg.com/picomap/dist/picomap.js"></script>`
 
